@@ -39,8 +39,6 @@ int consecutive3(int c[], int n)
 }
 
 
-
-
 int main()
 {
     int n,cons3Result=0, j=0,temp;
