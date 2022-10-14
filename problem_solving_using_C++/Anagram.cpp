@@ -31,7 +31,7 @@ string removeDuplicate(string s)
 
 int anagram(string sub1, string sub2)
 {
-    int arr1[122]={0},arr2[122]={0},i=0;
+    int arr1[125]={0},arr2[125]={0},i=0;
 
 
 
