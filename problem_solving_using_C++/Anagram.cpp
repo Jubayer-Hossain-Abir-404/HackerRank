@@ -54,6 +54,7 @@ int anagram(string sub1, string sub2)
     sub1 = removeDuplicate(sub1);
     while(sub1[i]!='\0')
     {
+//        cout<<sub1<<endl;
         int index= sub1[i]+0;
         if(arr2[index]==0)
         {
@@ -61,9 +62,12 @@ int anagram(string sub1, string sub2)
         }
         else
         {
+//            cout<< arr1[index] << " - "<< arr2[index]<<endl;
             int diff = arr1[index] - arr2[index];
-            diff = abs(diff);
-            sum+=diff;
+            if(diff>=0)
+            {
+                sum+=diff;
+            }
         }
         i++;
     }
