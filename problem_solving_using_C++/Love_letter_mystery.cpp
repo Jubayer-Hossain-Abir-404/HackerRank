@@ -2,26 +2,24 @@
 
 using namespace std;
 
-int checkPalindrome(string s)
+
+
+int reduceValue(string s)
 {
     int n= s.length();
     int halfLen = s.length() / 2;
-    int c=0;
+    int sum=0;
     for(int i=0;i<halfLen;i++)
     {
-        if(s[i]==s[n-i-1])
+        if(s[i]!=s[n-i-1])
         {
-            c++;
+            int first = s[i] + 0;
+            int second = s[n-i-1] + 0;
+            int diff = abs(first-second);
+            sum+=diff;
         }
     }
-    if(c==halfLen)
-    {
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
+    return sum;
 }
 
 void solveMystery(string s[], int q)
@@ -29,7 +27,7 @@ void solveMystery(string s[], int q)
     for(int i=0;i<q;i++)
     {
         int sum=0;
-        int checkPal = checkPalindrome(s[i]);
+        int checkPal = reduceValue(s[i]);
         sum+=checkPal;
         cout<<sum<<endl;
     }
