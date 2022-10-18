@@ -27,9 +27,6 @@ string twoString(string s, string t)
 }
 
 
-
-
-
 int main()
 {
     int p;
