@@ -8,24 +8,30 @@ def left_rotate(arr, arr_length, rotation_times):
     return arr
 
 
-n = int(input())
+# n = input()
 
-d = int(input())
+# d = input()
+
+n, d = map(int, input().split())
 
 
 # creating an empty list
 lst = []
 
 # iterating till the range
-for i in range(0, n):
-    ele = int(input())
+# for i in range(0, n):
+    # ele = input()
     # adding the element
-    lst.append(ele)  
+    # lst.append(int(ele))
+
+lst = list(map(int, input().split()[:n]))
  
-print(lst)
+#print(lst)
 
 result = left_rotate(lst, n, d)
-print(result)
+# using list comprehension
+listToStr = ' '.join(map(str, result))
+print(listToStr)
 
 
     
