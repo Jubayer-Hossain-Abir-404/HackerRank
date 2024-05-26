@@ -24,7 +24,7 @@ class LinkedList:
         current_node.next = new_node
  
 
-    def printLL(self):
+    def printLinkedList(self):
         current_node = self.head
         while(current_node):
             print(current_node.data)
@@ -35,4 +35,4 @@ llist = LinkedList()
 for i in range(0, n):
     llist.insertAtEnd(int(input()));
 
-llist.printLL();
+llist.printLinkedList();
